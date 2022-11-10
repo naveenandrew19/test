@@ -15,7 +15,7 @@ spec:
    spec:
      containers:
      - name: influxdb
-       image: harbour.iplon.co.in/influxdb/v01
+       image: harbour.iplon.co.in/influxdb/dev:2.5.1
        ports:
        - name: influxdb3
          containerPort: 8086
