@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: influxdb
+ name: nodered
  namespace: iplon-app-dev
 spec:
  selector:
@@ -17,8 +17,8 @@ spec:
      - name: nodered
        image: harbour.iplon.co.in/nodered-dev/nodered/dev
        ports:
-       - name: influxdb3
-         containerPort: 8086
+       - name: nodered
+         containerPort: 1880
      imagePullSecrets:
        - name: harbor
          
