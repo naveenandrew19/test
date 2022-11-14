@@ -36,4 +36,4 @@ spec:
  ports:
    - port: 8086
      targetPort: 1880
-     nodePort: 32080
+     nodePort: 32081
