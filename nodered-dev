@@ -6,16 +6,16 @@ metadata:
 spec:
  selector:
     matchLabels:
-     app: influxdb
+     app: nodered
  template:
    metadata:
-     name: influxdb
+     name: nodered
      labels:
-       app: influxdb
+       app: nodered
    spec:
      containers:
-     - name: influxdb
-       image: harbour.iplon.co.in/influxdb-dev/influxdb/dev
+     - name: nodered
+       image: harbour.iplon.co.in/nodered-dev/nodered/dev
        ports:
        - name: influxdb3
          containerPort: 8086
@@ -27,13 +27,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: influxdb
+ name: nodered
  namespace: iplon-app-dev
 spec:
  type: NodePort
  selector:
-   app: influxdb
+   app: nodered
  ports:
    - port: 8086
-     targetPort: 8086
-     nodePort: 32086
+     targetPort: 1880
+     nodePort: 32080
