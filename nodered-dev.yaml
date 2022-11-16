@@ -34,6 +34,6 @@ spec:
  selector:
    app: nodered
  ports:
-   - port: 8086
+   - port: 1880
      targetPort: 1880
      nodePort: 32081
