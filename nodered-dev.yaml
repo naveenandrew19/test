@@ -16,6 +16,14 @@ spec:
      containers:
      - name: nodered
        image: harbour.iplon.co.in/nodered-dev/nodered/dev
+       volumeMounts:
+            - mountPath: /home/iplon/app/nodered-volume
+              name: nodered-volume
+     volumes:
+        - name: nodered-volume
+          hostPath:
+            path: /home/iplon/app/nodered-volume
+            type: DirectoryOrCreate
        ports:
        - name: nodered
          containerPort: 1880
